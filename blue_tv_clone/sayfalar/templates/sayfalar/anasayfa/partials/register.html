@@ -1,0 +1,48 @@
+{% load static %}
+
+<div class="container-fluid">
+    <div class="row register_container px-4">
+        <div class="col-2   ">
+            <span class="register_text">İlk 7 Gün <br> Ücretsiz Deneme <br>Yıllık üyelik ayda ₺15.9</span>
+        </div>
+        <div class="col-10 ">
+
+            <form class="register_content w-75 " action="#">
+                <div class="rg_form_container  w-100">
+                    
+                    <div class="col-3 rg_inp_container">
+                        <input type="text" placeholder="Ad Soyad" class="rg_form_inp form-control">
+                    </div>
+                    <div class="col-3 rg_inp_container">
+                        <input type="email" placeholder="E-posta Adresiniz" class= "rg_form_inp form-control">
+                    </div>
+                    <div class="col-3 rg_inp_container">
+                        <input type="text"  placeholder="Parola" class=" rg_form_inp form-control">
+                    </div>
+
+                    <div class=" ms-2 w-25 rg_form_btn btn btn-primary">Ücretsiz Dene</div>
+                </div>
+
+                <div class="mt-2 form-check">
+                    <input type="checkbox" class="form-check-input" id="">
+                    <label class="form-check-label text-white" for="">İletişim izinlerini ve üyelik sözleşmesini okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</label>
+                </div>
+            </form>
+            <div class="fast_rg_container h-100 ms-2">
+                <span class="text-white align-self-center mx-3">ya da </span>
+
+                <div class="fast_rg_content">
+                    <div class="fr-facebook fr_btn">
+                        <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                    </div>
+                    <div class=" fr-google fr_btn">
+                        <a href="#"><img src="{% static 'sayfalar/img/google-icon-2.svg' %}" alt=""></i></a>
+                    </div>
+                    <div class="fr-apple fr_btn">
+                        <a href="#"><i class="fa-brands fa-apple"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

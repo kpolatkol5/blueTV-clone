@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'sayfalar/css/anasayfa.css' %}">
+{% endblock css_files %}
+
+{% block js_files %}
+    <script src="{% static 'sayfalar/js/anasayfa.js' %}"></script>
+{% endblock js_files %}
+
+
+{% block content %}
+
+{% include "sayfalar/anasayfa/partials/register.html" %}
+{% include 'sayfalar/anasayfa/partials/slider.html' %}
+{% include 'sayfalar/anasayfa/partials/one_cikan_slider.html' %}
+
+{% endblock content %}

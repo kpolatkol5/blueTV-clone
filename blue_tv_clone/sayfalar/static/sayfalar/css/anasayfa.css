@@ -1,0 +1,177 @@
+.register_container{
+
+    min-height: 115px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.register_text{
+    font-weight: var(--text-bold);
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+}
+.register_content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.rg_form_container{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border: 0px !important;
+    border-radius: 0px !important;
+    outline: 0px !important;
+
+}
+.rg_inp_container{
+
+    margin-right:1rem ;
+}
+
+.rg_form_inp{
+    padding: 4px 11px;
+    height: 48px;
+    outline: 0px !important;
+    border: none !important;
+    border-radius: 0px !important;
+
+}
+
+.rg_form_btn{
+    padding: 10px 20px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+
+
+
+.fast_rg_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register_container .col-10{
+    display: flex;
+    justify-content: center;
+}
+
+
+.fr_btn {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+.fast_rg_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fast_rg_content .fr-facebook a {
+    text-decoration: none;
+
+}
+.fast_rg_content .fr-facebook a i{
+    font-size: 25px;
+    color: blue;
+}
+
+.fast_rg_content .fr-google a {
+    text-decoration: none;
+
+}
+.fast_rg_content .fr-google a i{
+    font-size: 25px;
+    color: blue;
+}
+
+.fast_rg_content .fr-apple a {
+    text-decoration: none;
+
+}
+.fast_rg_content .fr-apple a i{
+    font-size: 25px;
+    color: black;
+}
+
+/*! register bitti */
+
+/* *slider başladı */
+
+.slider_container{
+    height:713px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    background-image: linear-gradient(to bottom ,rgb(8, 19, 41,0.5), rgb(8, 19, 41,1));
+
+
+}
+.slider_content h1{
+    font-size: 40px;
+
+}
+
+.slider_container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+}
+.slider_text_container{
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slider_text{
+    color:white;
+    font-size: 18px;
+    font-weight: var(--text-bold);
+
+}
+
+
+/*! slider bitti */
+
+/* *one cikan basladi */
+
+.one_cikan_container p{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+
+
+}
+
+
+
+
+
+
+
+
