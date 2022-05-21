@@ -4,6 +4,17 @@
     --secondary-color:#23306D;
     --body-color:#081329;
 }
+.cm-t{
+    margin-top: 60px;
+}
+
+.mx_widht{
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 body{
     background-color:var(--body-color);
 }
