@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% include 'sayfalar/filmler/partials/filmler-slider.html' %}
+
+{% endblock content %}
+
+
+
+
+
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'sayfalar/css/filmler.css' %}">
+{% endblock css_files %}
+
+{% block js_files %}
+<script src="{% static 'sayfalar/js/filmler.js' %}" ></script>
+{% endblock js_files %}

@@ -1,0 +1,24 @@
+{% load static %}
+
+
+<div class=" owl-carousel owl-theme film_slider">
+    {% for slider in film_slider %}
+    <div class="item">
+
+        <div class="slider_img_container">
+            <img src="{{slider.slider_resim.url}}" alt="">
+        </div>
+
+        <div class="slider_content">
+            <div class="slider_content_img">
+                Lorem, ipsum.
+            </div>
+
+            <div class="slider_description">
+                {{slider.slider_aciklama}}
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
