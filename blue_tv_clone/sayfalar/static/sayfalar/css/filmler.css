@@ -1,4 +1,97 @@
-.film_slider{
-    height: 785px;
+
+
+
+.slider_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
+
+.slider_gradient{
+    background-image: linear-gradient(to bottom , rgb(8, 19, 41, 0.1),rgb(8, 19, 41, 0.9));
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+}
+.slider_content {
+    width: 25%;
+    position: absolute;
+    z-index: 2;
+    margin-left: 55px;
+
+}
+
+.slider_description {
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.slider_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.slider_btn .btn-light {
+    font-weight: var(--text-bold);
+    height: 45px;
+    font-size: 20px;
+}
+
+.slider_btn .btn-light i {
+    font-size: 16px;
+}
+.btn_sonra_izle {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: rgba(229, 231, 235, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+}
+
+.btn_sonra_izle i {
+    color: white;
+    font-size: 20px;
+}
+
+/* !slider_bitti */
+
+/** Tüm kategoriler başladı */
+.mx-width{
+    width: 95%;
+    margin: auto;
+}
+
+.tüm_kategoriler h1{
+    font-size: 1.25rem;
+    color: white;
+    line-height: 1.75rem;
+
+}
+.tüm_kategoriler_slider .item{
+    height: 120px;
+    padding: 18px;
+    border-radius:3px ;
+
+}
+.tüm_kategoriler_slider .item{
+
+    background-color: rgb(186, 0, 229);
+
+}
+.tüm_kategoriler_slider .item a{
+    text-decoration: none;
+    color: white;
+    font-weight: var(--text-bold);
+    font-size: 20px;
+}
