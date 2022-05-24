@@ -2,9 +2,9 @@ from django.db import models
 from django.utils.text import slugify
 
 class Yonetmenler(models.Model):
-    yonetmen_adi    =   models.CharField(max_length=50 , verbose_name="Yönetmen")
-    slug            =   models.SlugField(null=False ,blank=True,unique=True, db_index=True,editable=False )
-    is_active       =   models.BooleanField(default=False)
+    yonetmen_adi    =   models.CharField(max_length = 50 , verbose_name = "Yönetmen")
+    slug            =   models.SlugField(null = False, blank = True, unique = True, db_index = True, editable = False)
+    is_active       =   models.BooleanField(default = False)
     
     def __str__(self):
         return self.yonetmen_adi

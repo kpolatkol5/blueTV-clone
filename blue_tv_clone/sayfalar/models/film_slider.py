@@ -3,13 +3,13 @@ from sayfalar.models.filmler import Filmler
 from ckeditor.fields import RichTextField
 
 
-class Film_slider(models.Model):
-    slider_resim    =   models.FileField(upload_to="filmler/slider" , verbose_name="Slider Resmi")
+class FilmSlider(models.Model):
+    slider_resim    =   models.FileField(upload_to = "filmler/slider" , verbose_name = "Slider Resmi")
     slider_aciklama =   RichTextField()
-    slider_etiket   =   models.CharField(max_length=50 , verbose_name="Slider Etiketi" , blank=True)
-    slider_film     =   models.ForeignKey(Filmler, on_delete=models.CASCADE)
-    is_active       =   models.BooleanField(default=False , verbose_name="Aktif Slider")
-    slider_sm_resim =   models.FileField(upload_to="filmler/slider" , verbose_name="Slider Küçük Resim" , blank=True)
+    slider_etiket   =   models.CharField(max_length = 50 , verbose_name = "Slider Etiketi" , blank=True)
+    slider_film     =   models.ForeignKey(Filmler, on_delete = models.CASCADE)
+    is_active       =   models.BooleanField(default = False , verbose_name = "Aktif Slider")
+    slider_sm_resim =   models.FileField(upload_to = "filmler/slider" , verbose_name = "Slider Küçük Resim" , blank = True)
     
     
     def __str__(self):

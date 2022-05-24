@@ -5,7 +5,7 @@ from django.utils.text import slugify
 
 class Dublaj(models.Model):
     dublaj_adi      =   models.CharField(verbose_name="dublaj adı" , max_length=20)
-    slug            =   models.SlugField(null=False ,blank=True,unique=True, db_index=True,editable=False )
+    slug            =   models.SlugField(null = False , blank = True, unique = True, db_index = True, editable = False )
     is_active       =   models.BooleanField(default=False)
     
     def __str__(self):

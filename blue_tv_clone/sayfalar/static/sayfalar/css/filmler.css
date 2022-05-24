@@ -95,3 +95,12 @@
     font-weight: var(--text-bold);
     font-size: 20px;
 }
+/*! Tüm kategoriler bitti */
+
+/** film kategorileri başladı */
+
+.film_kategori_slider h2{
+
+    color: white;
+    
+}

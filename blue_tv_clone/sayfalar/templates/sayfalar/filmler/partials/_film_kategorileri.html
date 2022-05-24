@@ -1,0 +1,21 @@
+{% load static %}
+<section class="container-fluid my-5 ">
+    {% for kategori in kategorideki_filmler %}
+    <div class="mx-width film_kategori_slider">
+
+        <h2>{{kategori|first}}</h2> 
+
+        <div class="film_kategori_slide_container  owl-carousel owl-theme">
+
+            {% for filmler in kategori|last %}
+        
+             <div class="item">
+                <a href="#">{{filmler.film_adi}}</a>
+            </div>
+            
+            {% endfor %}
+            
+        </div>
+    </div>
+    {% endfor %}
+</section>
