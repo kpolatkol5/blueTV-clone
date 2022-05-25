@@ -8,18 +8,17 @@ from ckeditor.fields import RichTextField
 from django.utils.text import slugify
 
 class Filmler(models.Model):
-    film_adi            =   models.CharField(verbose_name   = "Fİlm Adı", max_length = 50)
+    film_adi            =   models.CharField(verbose_name   = "Film Adı", max_length = 50)
     imdb_puani          =   models.FloatField(verbose_name  = "Filmin İMDB puanı")
-    dublaj              =   models.ForeignKey(Dublaj,verbose_name = "Dublaj Seç", on_delete = models.CASCADE)
+    dublaj              =   models.ForeignKey(Dublaj,verbose_name = "Dublaj Seç", blank = True, on_delete = models.CASCADE)
     film_kategoriler    =   models.ManyToManyField(FilmKategorileri , related_name = "filmler")
-    yonetmen            =   models.ManyToManyField(Yonetmenler , related_name = "yonetmen")
-    film_aciklama       =   RichTextField()
-    film_cikis_tarihi   =   models.DateTimeField()
-    oyuncular           =   models.ManyToManyField(Oyuncular , related_name = "oyuncular")
+    yonetmen            =   models.ManyToManyField(Yonetmenler , related_name = "Yönetmen")
+    film_aciklama       =   RichTextField(verbose_name = "Açıklama")
+    oyuncular           =   models.ManyToManyField(Oyuncular , related_name = "Oyuncular")
     film_resmi          =   models.FileField(upload_to = "sayfalar/filmler")
-    is_active           =   models.BooleanField(default = False)
+    is_active           =   models.BooleanField(default = False , verbose_name="Aktif Film")
     slug                =   models.SlugField(null = False, blank = True, unique = True, db_index = True, editable = False)
-        
+    film_kucuk_resmi    =   models.FileField(upload_to = "sayfalar/filmler/kucuk_resimler" ,  null=True , blank=True ,verbose_name = "Film Küçük Resim")
 
     def __str__(self):
         return self.film_adi

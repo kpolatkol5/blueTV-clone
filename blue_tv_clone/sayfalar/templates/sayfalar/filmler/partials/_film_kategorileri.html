@@ -1,20 +1,28 @@
 {% load static %}
 <section class="container-fluid my-5 ">
     {% for kategori in kategorideki_filmler %}
-    <div class="mx-width film_kategori_slider">
+    <div class="mx-width film_kategori_slider mt-5">
 
-        <h2>{{kategori|first}}</h2> 
+        <h2 class="my-3">{{kategori|first}}</h2> 
 
         <div class="film_kategori_slide_container  owl-carousel owl-theme">
 
-            {% for filmler in kategori|last %}
+        {% for filmler in kategori|last %}
         
              <div class="item">
-                <a href="#">{{filmler.film_adi}}</a>
+
+                <img class="img-fluid" src="{{filmler.film_kucuk_resmi.url}}" alt="">
+                
+                <div class="film_info_container">
+                        <div class="hemen_izle me-2"><i class="fa-solid fa-play"></i></div>
+                        <div class="sonra_izle me-2"><i class="fa-solid fa-plus"></i></div>
+                        <div class="info me-2"><i class="fa-solid fa-info"></i></div>
+                        <div class="like me-2"><i class="fa-solid fa-thumbs-up"></i></div>
+
+                </div>
             </div>
             
             {% endfor %}
-            
         </div>
     </div>
     {% endfor %}
