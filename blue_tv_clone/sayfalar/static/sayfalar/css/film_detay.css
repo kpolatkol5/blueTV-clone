@@ -1,0 +1,80 @@
+/* *kategori_detay basladi* */
+.mx-width {
+    width: 95%;
+    margin: auto;
+}
+
+.kategori_detay_info_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detay_baslik,
+.detay_filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detay_baslik i {
+    color: white;
+    font-size: 30px;
+}
+
+.detay_baslik h1 {
+    font-size: 32px;
+    color: white;
+}
+
+.detay_filter i {
+    color: white;
+    font-size: 16px;
+}
+
+.detay_filter_sm {
+    display: none;
+}
+
+.film {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.film img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    object-position: center center;
+}
+
+/* resposive  */
+
+@media only screen and (max-width: 1000px) {
+    .detay_baslik i{
+        font-size: 22px
+    }
+    .detay_baslik h1 {
+        font-size: 24px;
+
+    }
+}
+
+@media only screen and (max-width:430px) {
+    .detay_filter_sm {
+        display: block;
+    }
+
+    .detay_filter_sm i {
+        color: white;
+        font-size: 20px;
+    }
+
+    .detay_filter {
+        display: none;
+    }
+
+}
