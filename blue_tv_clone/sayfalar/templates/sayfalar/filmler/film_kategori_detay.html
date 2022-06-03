@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'sayfalar/css/film_detay.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+
+<section class="container-fluid my-5">
+    <div class="mx-width kategori_detay_info_container">
+        <div class="detay_baslik">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            <h1 class="ms-3">{{kategori.kategori_adi}}</h1>
+        </div>
+        <div class="detay_filter">
+            <span class="text-white me-3">
+                En Son Eklenen
+            </span>
+            <i class="fa-solid fa-arrow-down-long"></i>
+        </div>
+        <div class="detay_filter_sm">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        </div>
+    </div>
+    <div class="row mt-4 film_container mx-width">
+        {% for filmler in kategorideki_filmler %}
+        <div class=" col-xl-3  p-2 film  col-6  ">
+            <img src="{{filmler.film_kucuk_resmi.url}}" alt="">
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+{% endblock content %}
+
+{% block js_files %}
+<script src="{% static 'sayfalar/js/film_detay.js' %}"></script>
+
+{% endblock js_files %}

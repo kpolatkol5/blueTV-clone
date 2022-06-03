@@ -1,27 +1,97 @@
 {% load static %}
 <section class="container-fluid my-5 ">
+
+
     {% for kategori in kategorideki_filmler %}
     <div class="mx-width film_kategori_slider mt-5">
 
-        <h2 class="my-3">{{kategori|first}}</h2> 
+
+        <h2 class="kategori_detay">{{kategori.kategori_adi }}
+            <a class="mx-2" href="{% url 'film-kategori' kategori.kategori_adi.slug %}">Tümünü Göster</a><i
+                class="fa-solid fa-angle-right"></i>
+        </h2>
+
 
         <div class="film_kategori_slide_container  owl-carousel owl-theme">
 
-        {% for filmler in kategori|last %}
-        
-             <div class="item">
+            {% for filmler in kategori.katgorinin_filmleri %}
+
+            <div class="item">
 
                 <img class="img-fluid" src="{{filmler.film_kucuk_resmi.url}}" alt="">
-                
-                <div class="film_info_container">
-                        <div class="hemen_izle me-2"><i class="fa-solid fa-play"></i></div>
-                        <div class="sonra_izle me-2"><i class="fa-solid fa-plus"></i></div>
-                        <div class="info me-2"><i class="fa-solid fa-info"></i></div>
-                        <div class="like me-2"><i class="fa-solid fa-thumbs-up"></i></div>
+
+                <div class="title-info"></div>
+                <div class="film_info_container ">
+                    <div class="film_info_btn me-2"><i class="fa-solid fa-play"></i></div>
+
+                    <div class="film_info_btn me-2"><i class="fa-solid fa-plus"></i></div>
+
+                    <div class="film_info_btn me-2"><i class="fa-solid fa-info"></i></div>
+
+                    <div class="film_info_btn me-2"><i class="fa-solid fa-thumbs-up"></i></div>
+                </div>
+
+                <div class="film_modal_container">
+
+                    <div class="modal_detay">
+
+                        <img src="{% static 'sayfalar/img/en_sevilen_slider/slider_1.png' %}" alt="">
+
+                        <div class="row">
+                            <div class="col-9">
+
+                                <span>logo</span>
+
+                                <div class="film_bilgi mt-2">
+                                    <span class="me-2">2013</span> <span class="me-2">France , belgium , Spanin </span>
+                                    <span class="me-2">172dk</span>
+                                </div>
+
+                                <div class="modal_navigation mt-3">
+                                    <div class="btn btn-light">
+                                        <i class="fa-solid fa-play"></i>
+                                        <span class="ms-2">Ücretsiz Dene</span>
+                                    </div>
+                                </div>
+
+                                <div class="film_modal_detay my-4">
+                                    <div class="mt-2">
+                                        <span class="modal_text_lenght">IMDB:</span> <span class="ms-5"> 7.7</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="modal_text_lenght">Tür:</span> <span class="ms-5"> Dram
+                                            Romantik</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="modal_text_lenght">Dublaj:</span> <span
+                                            class="ms-5">Fransızca</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="modal_text_lenght">Yonetmen:</span> <span class="ms-5"> Abdellatif
+                                            Kechiche</span>
+                                    </div>
+                                </div>
+                                <div class="modal_film_description">
+                                    2013 yılında Cannes'da Altın Palmiye'yi kazanan film, biri henüz lise öğrencisi
+                                    diğeri ise
+                                    mavi saçlı bir sanatçı olan iki genç kızın yıllara yayılan birliktelikleri üzerinden
+                                    yaşamı
+                                    ve aşkı sorguluyor.
+                                </div>
+                            </div>
+
+                            <div class="col-3 ">
+                                <div class="modal_oyuncu_btn">
+                                    <button type="button" class="btn btn-light"><i class="fa-solid fa-users"></i>
+                                    </button><span class="ms-2">Oyuncular</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
-            
+
             {% endfor %}
         </div>
     </div>
