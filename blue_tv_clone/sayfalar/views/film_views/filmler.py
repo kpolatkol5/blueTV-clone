@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from sayfalar.models.filmler import Filmler
-from sayfalar.models.film_slider import FilmSlider
-from sayfalar.models.film_kategorileri import FilmKategorileri
+from sayfalar.models.filmler.filmler import Filmler
+from sayfalar.models.filmler.film_slider import FilmSlider
+from sayfalar.models.filmler.film_kategorileri import FilmKategorileri
 
 def filmler(request):
     def categori_in_filmler(kategori):

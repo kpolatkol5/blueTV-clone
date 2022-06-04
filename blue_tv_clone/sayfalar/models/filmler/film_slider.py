@@ -1,5 +1,5 @@
 from django.db import models
-from sayfalar.models.filmler import Filmler
+from sayfalar.models.filmler.filmler import Filmler
 from ckeditor.fields import RichTextField
 
 

@@ -77,7 +77,7 @@ TEMPLATES = [
 
 
 JET_DEFAULT_THEME = 'light-gray'
-JET_SIDE_MENU_COMPACT = True
+JET_SIDE_MENU_COMPACT = False
 
 JET_THEMES = [
     {
@@ -110,6 +110,21 @@ JET_THEMES = [
         'color': '#222',
         'title': 'Light Gray'
     },
+]
+
+JET_SIDE_MENU_ITEMS = [
+    {'app_label': 'auth', 'items': [
+        {'name': 'group'},
+        {'name': 'user'},
+    ]},
+    {"label":"Filmler" , 'app_label': 'sayfalar', 'items': [
+        {'name': 'dublaj'},
+        {'name': 'filmkategorileri'},
+        {'name': 'filmslider'},
+        {'name': 'filmler'},
+        {'name': 'oyuncular'},
+        {'name': 'yonetmenler'},
+    ]},
 ]
 WSGI_APPLICATION = 'blue_tv_clone.wsgi.application'
 

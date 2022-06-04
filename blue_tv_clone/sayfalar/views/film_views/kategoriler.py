@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from sayfalar.models.film_kategorileri import FilmKategorileri
+from sayfalar.models.filmler.film_kategorileri import FilmKategorileri
 
 
 def kategoriler(request,slug):

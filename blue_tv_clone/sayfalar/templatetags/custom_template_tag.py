@@ -1,5 +1,5 @@
 from django import template
-from sayfalar.models.film_kategorileri import FilmKategorileri
+from sayfalar.models.filmler.film_kategorileri import FilmKategorileri
 
 
 register    =   template.Library()

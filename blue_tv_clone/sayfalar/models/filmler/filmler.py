@@ -1,8 +1,8 @@
 from django.db import models
-from sayfalar.models.oyuncular import Oyuncular
-from sayfalar.models.yonetmenler import Yonetmenler
-from sayfalar.models.film_kategorileri import FilmKategorileri
-from sayfalar.models.dublaj import Dublaj
+from sayfalar.models.filmler.oyuncular import Oyuncular
+from sayfalar.models.filmler.yonetmenler import Yonetmenler
+from sayfalar.models.filmler.film_kategorileri import FilmKategorileri
+from sayfalar.models.filmler.dublaj import Dublaj
 
 from ckeditor.fields import RichTextField
 from django.utils.text import slugify
