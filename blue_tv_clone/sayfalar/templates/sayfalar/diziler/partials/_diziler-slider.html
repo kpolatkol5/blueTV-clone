@@ -1,0 +1,21 @@
+{% load static %}
+<div class=" owl-carousel owl-theme film_slider">
+    {% for slider in dizi_slider %}
+    <div class=" slider_container item">
+        <div class="slider_content ">
+            <div class="slider_small_img">
+               {% comment %} <img src="{{slider.slider_sm_resim.url}}" alt=""> {% endcomment %}
+            </div>
+            <div class="slider_description mt-2">
+                {{slider.slider_aciklama|safe}}
+            </div>
+            <div class="slider_btn mt-4">
+                <button class="btn btn-light" type="button"  ><i class="fa-solid fa-play"></i> <span class=" ms-3">Ücretsiz Dene</span></button>
+                <button type="button" class="btn_sonra_izle ms-3"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+        <div class="slider_gradient"></div>
+        <img class="img-fluid" src="{{slider.slider_resim.url}}" alt="">
+    </div>
+    {% endfor %}
+</div>

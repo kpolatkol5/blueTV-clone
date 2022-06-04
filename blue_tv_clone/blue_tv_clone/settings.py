@@ -131,7 +131,7 @@ JET_SIDE_MENU_ITEMS = [
         {'name': 'diziler'},
         {'name': 'oyuncular'},
         {'name': 'yonetmenler'},
-        {"name":  "dizislider"}
+        {"name":  "dizikategorileri"}
     ]},
 ]
 WSGI_APPLICATION = 'blue_tv_clone.wsgi.application'

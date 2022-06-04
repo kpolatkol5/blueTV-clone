@@ -1,0 +1,18 @@
+{% load static %}
+
+
+<section class="mx-width ">
+
+    <div class="container-fluid tüm_kategoriler">
+        <h1>Tüm Türler</h1>
+        <div class=" tüm_kategoriler_slider owl-carousel owl-theme">
+
+            {% for kategoriler in dizi_kategorileri  %}
+            <div class="item">
+                <a href="">{{kategoriler.kategori_adi}}</a>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</section>

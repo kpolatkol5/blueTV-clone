@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'sayfalar/css/diziler.css' %}">
+<link rel="stylesheet" href="{% static 'sayfalar/css/filmler.css' %}">
+
+{% endblock css_files %}
+
+
+{% block content %}
+
+{% include 'sayfalar/diziler/partials/_diziler-slider.html' %}
+{% include 'sayfalar/diziler/partials/_tüm_türler_kategorisi.html' %}
+{% include 'sayfalar/diziler/partials/_dizi_kategorileri.html' %}
+
+{% endblock content %}
+
+
+{% block js_files %}
+<script src="{% static 'sayfalar/js/diziler.js' %}"></script>
+<script src="{% static 'sayfalar/js/filmler.js' %}"></script>
+
+{% endblock js_files %}
