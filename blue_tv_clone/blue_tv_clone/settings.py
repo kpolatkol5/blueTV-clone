@@ -77,7 +77,7 @@ TEMPLATES = [
 
 
 JET_DEFAULT_THEME = 'light-gray'
-JET_SIDE_MENU_COMPACT = False
+JET_SIDE_MENU_COMPACT = True
 
 JET_THEMES = [
     {
@@ -124,6 +124,14 @@ JET_SIDE_MENU_ITEMS = [
         {'name': 'filmler'},
         {'name': 'oyuncular'},
         {'name': 'yonetmenler'},
+    ]},
+    {"label":"Diziler" , 'app_label': 'sayfalar', 'items': [
+        {'name': 'dublaj'},
+        {'name': 'dizislider'},
+        {'name': 'diziler'},
+        {'name': 'oyuncular'},
+        {'name': 'yonetmenler'},
+        {"name":  "dizislider"}
     ]},
 ]
 WSGI_APPLICATION = 'blue_tv_clone.wsgi.application'
